@@ -1,4 +1,10 @@
 resource "aws_elasticsearch_domain" "es_domain" {
+
+  # Enabling HTTPS
+  domain_endpoint_options {
+    enforce_https = true
+  }
+
   # Domain name
   domain_name = var.domain_name
 
