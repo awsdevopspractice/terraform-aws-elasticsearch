@@ -1,9 +1,9 @@
 module "aws_es" {
 
-  source = "../../"
+  source = "../../../"
 
   domain_name           = var.es_domain_name
-  elasticsearch_version = "7.1"
+  elasticsearch_version = var.es_version
   cluster_config = {
     dedicated_master_enabled = "true"
     instance_count           = "3"
