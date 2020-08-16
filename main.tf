@@ -6,12 +6,6 @@ resource "aws_elasticsearch_domain" "es_domain" {
     tls_security_policy = "Policy-Min-TLS-1-2-2019-07"
   }
 
-  lifecycle {
-    ignore_changes = [
-        "access_policies"
-    ]
-  }
-  
   # Domain name
   domain_name = var.domain_name
 
