@@ -245,5 +245,10 @@ locals {
     }
   ]
 
+  lifecycle {
+    ignore_changes = [
+        "access_policies"
+  ]
+
 
 }
