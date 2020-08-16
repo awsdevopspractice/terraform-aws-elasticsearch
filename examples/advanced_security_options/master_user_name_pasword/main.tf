@@ -14,10 +14,9 @@ module "aws_es" {
 
   advanced_security_options = {
     enabled                        = true
-    internal_user_database_enabled = true
+    internal_user_database_enabled = false
     master_user_options = {
-      master_user_name     = var.es_master_user_name
-      master_user_password = var.es_master_password
+      master_user_arn     = var.es_master_user_arn
     }
   }
 
